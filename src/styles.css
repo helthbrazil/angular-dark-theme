@@ -1,0 +1,57 @@
+:root {
+    --bg: #fefefe;
+    --bg-strong: #f2f2f2;
+    --bg-inverse: #292929;
+    --text-color: black;
+    --primary: red;
+    --duration-animation: 200ms;
+}
+
+.dark-theme {
+    --bg: #292929;
+    --bg-strong: #252525;
+    --bg-inverse: #fefefe;
+    --text-color: white;
+    --primary: rgb(150, 13, 13);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    transition-duration: var(--duration-animation);
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text-color);
+}
+
+body.dark-theme .icon {
+    filter: invert(1);
+    transition-duration: var(--duration-animation);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.content {
+    padding-top: 80px;
+    padding-bottom: 30px;
+    max-width: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adiciona regra de media query para tornar o card responsivo */
+@media screen and (max-width: 440px) {
+    .content {
+        padding-top: 80px;
+        padding-bottom: 30px;
+        max-width: 100%;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

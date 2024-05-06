@@ -1,0 +1,21 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Adiciona regra de media query para tornar o card responsivo */
+@media screen and (max-width: 440px) {
+    .cards {
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content:end;
+        align-self: center;
+        gap: 20px;
+    }
+}

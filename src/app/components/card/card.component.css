@@ -1,0 +1,52 @@
+.card {
+    background-color: var(--bg-strong);
+    width: 400px;
+    /* Tamanho padrão */
+    height: 300px;
+    /* Tamanho padrão */
+    padding: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.img-container {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 200px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.card-content {
+    border-radius: 0 0 10px 10px;
+    margin-top: -15px;
+    width: 400px;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* Adiciona regra de media query para tornar o card responsivo */
+@media screen and (max-width: 440px) {
+    .card {
+        width:380px;
+       
+        height: auto;
+        /* Define a altura automática para manter a proporção */
+    }
+
+    .img-container img {
+        height: auto;
+        /* Define a altura automática para manter a proporção */
+    }
+}

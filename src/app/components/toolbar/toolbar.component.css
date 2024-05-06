@@ -1,0 +1,25 @@
+.toolbar {
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: var(--bg-strong);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+    transition: box-shadow 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.icon-theme {
+    cursor: pointer;
+    transition-duration: 3s;
+}
+
+.icon-theme .flip {
+    transform: rotate(180deg);
+    transition-duration: 3s;
+}

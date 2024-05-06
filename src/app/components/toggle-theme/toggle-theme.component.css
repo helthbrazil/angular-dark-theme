@@ -1,0 +1,35 @@
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: transparent;
+    border: 3px var(--bg-inverse) solid;
+    border-radius: 15px;
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-handler {
+    z-index: 99;
+    position: absolute;
+    margin-top: 5px;
+    width: 25px;
+    height: 25px;
+    background-color: var(--bg-inverse);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.toggle-handler.light {
+    margin-left: 5px;
+    transition-duration: var(--duration-animation);
+    transition-timing-function: ease-out;
+}
+
+.toggle-handler.dark {
+    margin-left: 45px;
+    transition-duration: var(--duration-animation);
+    transition-timing-function: ease-out;
+}
