@@ -39,14 +39,18 @@
 /* Adiciona regra de media query para tornar o card responsivo */
 @media screen and (max-width: 440px) {
     .card {
-        width:380px;
-       
+        width: calc(100% - 40px);
+        margin-left: 20px;
         height: auto;
-        /* Define a altura automática para manter a proporção */
+    }
+
+    .card-content {
+        width: 100%;
+        height: auto;
     }
 
     .img-container img {
+        width: 100%;
         height: auto;
-        /* Define a altura automática para manter a proporção */
     }
 }

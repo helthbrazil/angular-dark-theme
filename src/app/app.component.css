@@ -9,12 +9,10 @@
 /* Adiciona regra de media query para tornar o card responsivo */
 @media screen and (max-width: 440px) {
     .cards {
-        padding-left: 40px;
-        display: flex;
+        max-width: 100%;
+        min-width: 100%;
         flex-direction: column;
-        flex-wrap: nowrap;
-        width: 100%;
-        justify-content:end;
+        justify-content: center;
         align-self: center;
         gap: 20px;
     }
