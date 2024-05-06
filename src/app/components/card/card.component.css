@@ -1,9 +1,8 @@
 .card {
+    cursor: pointer;
     background-color: var(--bg-strong);
     width: 400px;
-    /* Tamanho padrão */
     height: 300px;
-    /* Tamanho padrão */
     padding: 0;
     border-radius: 10px;
     box-sizing: border-box;
@@ -36,20 +35,22 @@
     padding: 10px;
 }
 
+.container:hover .img-container img {
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
 /* Adiciona regra de media query para tornar o card responsivo */
 @media screen and (max-width: 440px) {
-    .card {
+
+    .card,
+    .img-container img {
         width: calc(100% - 40px);
         margin-left: 20px;
         height: auto;
     }
 
     .card-content {
-        width: 100%;
-        height: auto;
-    }
-
-    .img-container img {
         width: 100%;
         height: auto;
     }
