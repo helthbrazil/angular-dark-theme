@@ -1,6 +1,6 @@
 :root {
     --bg: #fefefe;
-    --bg-strong: #f2f2f2;
+    --bg-strong: rgba(242, 242, 242, 0.7);
     --bg-inverse: #292929;
     --text-color: black;
     --primary: red;
@@ -9,7 +9,7 @@
 
 .dark-theme {
     --bg: #292929;
-    --bg-strong: #252525;
+    --bg-strong: rgba(37, 37, 37, 0.7);
     --bg-inverse: #fefefe;
     --text-color: white;
     --primary: rgb(150, 13, 13);
