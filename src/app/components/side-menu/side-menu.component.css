@@ -1,0 +1,60 @@
+.side-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    z-index: 100;
+    top: 0px;
+    left: 0;
+    margin-left: -300px;
+    background-color: var(--bg-strong);
+    /* Ajuste para obter o efeito desejado */
+    backdrop-filter: blur(5px);
+    width: 300px;
+    height: 100vh;
+    box-sizing: border-box;
+    transition: margin-left 500ms ease;
+}
+
+.info {
+    
+}
+
+.user-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.side-menu.active {
+    margin-left: 0;
+    transition: margin-left 500ms ease;
+}
+
+.item-menu {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+}
+
+.item-menu>img {
+    width: 20px;
+    height: 20px;
+}
+
+.item-menu:hover {
+    background-color: var(--bg-strong);
+}
+
+.item-menu.active {
+    background-image: linear-gradient(to right, var(--primary), var(--bg));
+    font-weight: bold;
+}

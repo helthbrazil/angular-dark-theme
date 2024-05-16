@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import { ToggleThemeComponent } from '../toggle-theme/toggle-theme.component';
+import { MenuService } from '../../shared/services/menu.service';
 
 @Component({
   selector: 'neo-toolbar',
@@ -11,5 +12,11 @@ import { ToggleThemeComponent } from '../toggle-theme/toggle-theme.component';
   styleUrl: './toolbar.component.css',
 })
 export class ToolbarComponent {
- 
+  constructor(public menuService: MenuService) {
+    this.menuService.openMenu();
+  }
+
+  toggleMenu(){
+    this.menuService.toggleMenu();
+  }
 }

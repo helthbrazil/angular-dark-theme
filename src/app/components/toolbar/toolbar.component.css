@@ -10,10 +10,16 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px;
+    padding: 10px 20px;
     box-sizing: border-box;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
     transition: box-shadow 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .icon-theme {

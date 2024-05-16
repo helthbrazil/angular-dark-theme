@@ -1,0 +1,44 @@
+<!-- <div class="transp" [class.transp-active]="showMenu"></div> -->
+<div #sideMenu [class.active]="(menuService.getMenuStatus() | async)" neoClickOutside (clickOutside)="clickOutside($event)" class="side-menu">
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 5px">
+    <div class="avatar pointer zoom">
+      <img src="https://i.pravatar.cc/50" alt="" />
+    </div>
+    <img
+      (click)="toggleMenu()"
+      class="icon pointer zoom"
+      src="assets/images/close.png"
+      width="15"
+      height="15"
+      alt=""
+    />
+  </div>
+
+  <div class="item-menu active">
+    <img class="icon" src="assets/images/image-gallery.png" alt="">
+    <p>Gallery</p>
+  </div>
+
+  <div class="item-menu">
+    <img class="icon" src="assets/images/menu.png" alt="">
+    <p>Ativo</p>
+  </div>
+
+  <div class="item-menu">
+    <img class="icon" src="assets/images/menu.png" alt="">
+    <p>Ativo</p>
+  </div>
+
+  <div class="item-menu">
+    <img class="icon" src="assets/images/menu.png" alt="">
+    <p>Ativo</p>
+  </div>
+
+  <div class="item-menu">
+    <img class="icon" src="assets/images/settings.png" alt="">
+    <p>Settings</p>
+  </div>
+
+  
+
+</div>

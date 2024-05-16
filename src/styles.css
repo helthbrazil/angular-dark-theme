@@ -3,8 +3,9 @@
     --bg-strong: rgba(242, 242, 242, 0.7);
     --bg-inverse: #292929;
     --text-color: black;
-    --primary: red;
+    --primary: #BCECE0;
     --duration-animation: 200ms;
+    --duration-animation-menu: 5s;
 }
 
 .dark-theme {
@@ -12,7 +13,7 @@
     --bg-strong: rgba(37, 37, 37, 0.7);
     --bg-inverse: #fefefe;
     --text-color: white;
-    --primary: rgb(150, 13, 13);
+    --primary: #00D1D1;
 }
 
 body {
@@ -22,6 +23,49 @@ body {
     margin: 0;
     background-color: var(--bg);
     color: var(--text-color);
+}
+
+.transp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-strong, rgba(41, 41, 41, 0.6));
+    backdrop-filter: blur(5px);
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    display: none;
+    transition-duration: var(--duration-animation);
+}
+
+.transp-active {
+    display: block;
+    pointer-events: auto;
+    transition-duration: var(--duration-animation);
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 5px var(--bg-inverse) thick;
+    width: 40px;
+    height: 40px;
+}
+
+.zoom:hover {
+    opacity: 0.95;
+    transform: scale(1.1);
+    transition-duration: var(--duration-animation);
+}
+
+.avatar>img {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+}
+
+.no {
+    display: none;
 }
 
 body.dark-theme .icon {
