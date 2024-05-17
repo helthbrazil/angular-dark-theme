@@ -13,7 +13,7 @@ import { MenuService } from '../../shared/services/menu.service';
 })
 export class ToolbarComponent {
   constructor(public menuService: MenuService) {
-    this.menuService.openMenu();
+    //this.menuService.openMenu();
   }
 
   toggleMenu(){

@@ -50,11 +50,12 @@
     height: 20px;
 }
 
-.item-menu:hover {
-    background-color: var(--bg-strong);
+.item-menu:not(.active):hover {
+    background-image: linear-gradient(to right, var(--bg-strong-2), var(--bg));
 }
 
 .item-menu.active {
     background-image: linear-gradient(to right, var(--primary), var(--bg));
     font-weight: bold;
+    transition:  background-image var(--duration-animation) ;
 }

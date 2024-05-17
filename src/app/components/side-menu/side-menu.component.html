@@ -14,31 +14,20 @@
     />
   </div>
 
-  <div class="item-menu active">
+  <div (click)="toggleMenu()" class="item-menu" [routerLink]="['/gallery']" [class.active]="isRouteActive('gallery')">
     <img class="icon" src="assets/images/image-gallery.png" alt="">
     <p>Gallery</p>
   </div>
 
-  <div class="item-menu">
-    <img class="icon" src="assets/images/menu.png" alt="">
-    <p>Ativo</p>
+  <div (click)="toggleMenu()" class="item-menu" [routerLink]="['/dashboard']" [class.active]="isRouteActive('dashboard')">
+    <img class="icon" src="assets/images/dashboard.png" alt="">
+    <p>Dashboard</p>
   </div>
 
-  <div class="item-menu">
-    <img class="icon" src="assets/images/menu.png" alt="">
-    <p>Ativo</p>
-  </div>
-
-  <div class="item-menu">
-    <img class="icon" src="assets/images/menu.png" alt="">
-    <p>Ativo</p>
-  </div>
-
-  <div class="item-menu">
+  <div (click)="toggleMenu()" class="item-menu" [routerLink]="['/settings']" [class.active]="isRouteActive('settings')">
     <img class="icon" src="assets/images/settings.png" alt="">
     <p>Settings</p>
   </div>
-
   
 
 </div>

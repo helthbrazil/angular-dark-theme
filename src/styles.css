@@ -1,6 +1,7 @@
 :root {
     --bg: #fefefe;
     --bg-strong: rgba(242, 242, 242, 0.7);
+    --bg-strong-2: rgba(208, 208, 208, 0.7);
     --bg-inverse: #292929;
     --text-color: black;
     --primary: #BCECE0;
@@ -11,6 +12,7 @@
 .dark-theme {
     --bg: #292929;
     --bg-strong: rgba(37, 37, 37, 0.7);
+    --bg-strong-2: rgba(51, 51, 51, 0.7);
     --bg-inverse: #fefefe;
     --text-color: white;
     --primary: #00D1D1;
@@ -82,6 +84,9 @@ body.dark-theme .icon {
     padding-bottom: 30px;
     max-width: 100%;
     width: 100vw;
+}
+
+.content.center {
     display: flex;
     justify-content: center;
     align-items: center;
