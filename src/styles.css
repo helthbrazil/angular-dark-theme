@@ -80,10 +80,11 @@ body.dark-theme .icon {
 }
 
 .content {
-    padding-top: 80px;
-    padding-bottom: 30px;
-    max-width: 100%;
-    width: 100vw;
+    padding: 80px 20px 30px 20px;
+}
+
+.content.padding {
+    padding: 80px 30px 30px 30px;
 }
 
 .content.center {
@@ -95,8 +96,6 @@ body.dark-theme .icon {
 /* Adiciona regra de media query para tornar o card responsivo */
 @media screen and (max-width: 440px) {
     .content {
-        padding-top: 80px;
-        padding-bottom: 30px;
         max-width: 100%;
         display: flex;
         justify-content: center;

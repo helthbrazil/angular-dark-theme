@@ -33,3 +33,28 @@
     transition-duration: var(--duration-animation);
     transition-timing-function: ease-out;
 }
+
+@media (max-width: 600px) {
+    .toggle {
+        width: 45px;
+        height: 30px;
+    }
+
+    .toggle-handler {
+        margin-top: 7px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .toggle-handler.light {
+        margin-left: 5px;
+    }
+    
+    .toggle-handler.dark {
+        margin-left: 36px;
+    }
+
+    .toggle img {
+        width: 15px;
+    }
+}

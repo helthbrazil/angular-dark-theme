@@ -17,10 +17,6 @@
     transition: margin-left 500ms ease;
 }
 
-.info {
-    
-}
-
 .user-info {
     display: flex;
     gap: 10px;
@@ -58,4 +54,19 @@
     background-image: linear-gradient(to right, var(--primary), var(--bg));
     font-weight: bold;
     transition:  background-image var(--duration-animation) ;
+}
+
+@media (max-width: 600px){
+    .side-menu {
+        width: 100%;
+        margin-left: calc(100% * -1);
+    }
+
+    .item-menu {
+        justify-content: center;
+    }
+
+    .item-menu p {
+        width: 80px;
+    }
 }

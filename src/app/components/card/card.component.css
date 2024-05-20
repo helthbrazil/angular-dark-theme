@@ -43,15 +43,19 @@
 /* Adiciona regra de media query para tornar o card responsivo */
 @media screen and (max-width: 440px) {
 
-    .card,
-    .img-container img {
-        width: calc(100% - 40px);
-        margin-left: 20px;
+    .card {
+        object-fit: cover;
+        width: 100%;
+        margin-left: 0px;
         height: auto;
     }
 
+    .card-content > img {
+        object-fit: cover;
+    }
+
     .card-content {
-        width: 100%;
+        width: 100%; 
         height: auto;
     }
 }
