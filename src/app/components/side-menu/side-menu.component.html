@@ -24,6 +24,11 @@
     <p>Dashboard</p>
   </div>
 
+  <div (click)="toggleMenu()" class="item-menu" [routerLink]="['/land-page']" [class.active]="isRouteActive('land-page')">
+    <img class="icon" src="assets/images/landing-page.png" alt="">
+    <p>Landing Page</p>
+  </div>
+
   <div (click)="toggleMenu()" class="item-menu" [routerLink]="['/settings']" [class.active]="isRouteActive('settings')">
     <img class="icon" src="assets/images/settings.png" alt="">
     <p>Settings</p>
