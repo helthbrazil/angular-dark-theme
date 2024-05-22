@@ -1,5 +1,7 @@
 # Angular Dark Theme
 
+Click in this [link](https://helthbrazil.github.io/angular-dark-theme/gallery) to show the site.
+
 Run the commands below to run the application locally:
 
 ```sh
