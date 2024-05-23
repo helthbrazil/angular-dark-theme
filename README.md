@@ -19,7 +19,7 @@ ng add angular-cli-ghpages
 ```
 ```sh
 // Build the application with a base href for GitHub Pages
-ng build --base-href /angular-dark-theme/ --env.API_KEY=your_api_key_here
+node replace-api-key.js YOUR_API_KEY && ng build --configuration=production
 
 ```
 ```sh
