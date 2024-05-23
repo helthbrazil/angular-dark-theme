@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'neo-button',
@@ -9,4 +9,9 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
   @Input() label: string | undefined;
+  @Output() clickEvent = new EventEmitter();
+
+  click(){
+    this.clickEvent.emit();
+  }
 }

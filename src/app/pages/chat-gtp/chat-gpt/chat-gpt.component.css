@@ -1,0 +1,19 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question > h4 {
+    font-size: bold;
+    word-wrap: break-word;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+.response {
+    margin: 0;
+    padding: 5px 5px 5px 10px;
+    margin-bottom: 20px;
+    border-left: 3px var(--primary) solid;
+}

@@ -24,9 +24,14 @@
     <p>Dashboard</p>
   </div>
 
-  <div (click)="toggleMenu()" class="item-menu" [routerLink]="['/land-page']" [class.active]="isRouteActive('land-page')">
+  <!-- <div (click)="toggleMenu()" class="item-menu" [routerLink]="['/land-page']" [class.active]="isRouteActive('land-page')">
     <img class="icon" src="assets/images/landing-page.png" alt="">
     <p>Landing Page</p>
+  </div> -->
+
+  <div (click)="toggleMenu()" class="item-menu" [routerLink]="['/chat-gpt']" [class.active]="isRouteActive('chat-gpt')">
+    <img class="icon" src="assets/images/chat-gpt.png" alt="">
+    <p>Chat-GPT</p>
   </div>
 
   <div (click)="toggleMenu()" class="item-menu" [routerLink]="['/settings']" [class.active]="isRouteActive('settings')">

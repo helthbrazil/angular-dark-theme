@@ -1,0 +1,19 @@
+<div class="content">
+    <div class="form">
+        <div class="input-container">
+            <input class="input" id="input-text" type="text" [(ngModel)]="text">
+        </div>
+        <neo-button label="Buscar" (clickEvent)="find($event)"></neo-button>
+        <div *ngIf="fecthing" class="loader"></div>
+    </div>
+
+    <div *ngFor="let item of responses" class="item">
+        <div class="question">
+            <h4>{{item.question}}</h4>
+        </div>
+        <div class="response">
+            <span [innerHTML]="item.response"></span>
+        </div>
+    </div>
+    
+</div>

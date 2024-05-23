@@ -20,6 +20,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'chat-gpt',
+    loadChildren: () =>
+      import('./pages/chat-gtp/chat-gtp.module').then(
+        (m) => m.ChatGtpModule
+      ),
+  },
+  {
     path: 'not-found',
     loadChildren: () =>
       import('./pages/not-found/not-found.module').then(
