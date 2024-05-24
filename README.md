@@ -1,6 +1,7 @@
 # Angular Dark Theme
 
 Click in this [link](https://helthbrazil.github.io/angular-dark-theme/gallery) to view the site.
+
 This application needs a simple backend [app](https://github.com/helthbrazil/chat-gpt-nestjs) (created in NestJs)
 
 Run the commands below to run the application locally:
