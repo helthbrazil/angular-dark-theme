@@ -184,14 +184,11 @@ pre {
 }
 
 .response {
-    margin: 0;
+    margin: 5px 0 10px;
     padding: 5px 5px 5px 10px;
-    margin-bottom: 20px;
     border-left: 3px var(--primary) solid;
-    max-width: 100%;
+    max-width: 100%
 }
-
-
 
 /* Adiciona regra de media query para tornar o card responsivo */
 @media screen and (max-width: 440px) {
