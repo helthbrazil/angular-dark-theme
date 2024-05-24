@@ -1,5 +1,5 @@
 export const environment = {
     production: false,
-    gptUrl: 'http://localhost:8080?text=:TEXT'
+    gptUrl: 'https://chat-gpt-nestjs-5944b275c522.herokuapp.com/?text=:TEXT'
   };
   

@@ -1,10 +1,12 @@
 <div class="content">
     <div class="form">
-        <div class="input-container">
-            <input class="input" id="input-text" type="text" [(ngModel)]="text">
+        <div class="search" [class.sticky]="isSticky">
+            <div class="input-container">
+                <input class="input" [disabled]="fecthing" id="input-text" type="text" [(ngModel)]="text">
+            </div>
+            <neo-button [loading]="fecthing" label="{{fecthing ? 'Finding' : 'Find'}}" (clickEvent)="find($event)"></neo-button>
         </div>
-        <neo-button label="Find" (clickEvent)="find($event)"></neo-button>
-        <div *ngIf="fecthing" class="loader"></div>
+        <!-- <div *ngIf="fecthing" class="loader"></div> -->
         <div *ngFor="let item of responses" class="item">
             <div class="question">
                 <h4>{{item.question}}</h4>

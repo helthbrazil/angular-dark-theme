@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../../components/button/button.component';
 import { marked } from 'marked';
+import { environment } from '../../../../environments/environment';
 
 export interface IResponse {
   question: string;
@@ -21,9 +22,24 @@ export class ChatGptComponent {
   fecthing = false;
   response: string | Promise<string> | undefined;
   responses: IResponse[] = [];
+  isSticky = false;
 
   constructor(private chatGptService: ChatGptService) {
-    /* this.responses.push({
+    if (!environment.production)
+      this.mockResponses();
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  checkSticky() {
+    const searchElement = document.querySelector('.search');
+    if (searchElement) {
+      const rect = searchElement.getBoundingClientRect();
+      this.isSticky = rect.top <= 60;
+    }
+  }
+
+  private mockResponses() {
+    this.responses.push({
       question: 'What is the meaning of life? What is the meaning of life? What is the meaning of life? What is the meaning of life?',
       response: 'Teste testando teste Teste testando teste Teste testando teste Teste testando teste Teste testando teste'
     });
@@ -41,7 +57,67 @@ export class ChatGptComponent {
     this.responses.push({
       question: 'What is the meaning of life?',
       response: 'Teste testando teste'
-    }); */
+    });
+
+    this.responses.push({
+      question: 'What is the meaning of life? What is the meaning of life? What is the meaning of life? What is the meaning of life?',
+      response: 'Teste testando teste Teste testando teste Teste testando teste Teste testando teste Teste testando teste'
+    });
+
+    this.responses.push({
+      question: 'What is the meaning of life?',
+      response: 'Teste testando teste'
+    });
+
+    this.responses.push({
+      question: 'What is the meaning of life?',
+      response: 'Teste testando teste'
+    });
+
+    this.responses.push({
+      question: 'What is the meaning of life?',
+      response: 'Teste testando teste'
+    });
+
+    this.responses.push({
+      question: 'What is the meaning of life? What is the meaning of life? What is the meaning of life? What is the meaning of life?',
+      response: 'Teste testando teste Teste testando teste Teste testando teste Teste testando teste Teste testando teste'
+    });
+
+    this.responses.push({
+      question: 'What is the meaning of life?',
+      response: 'Teste testando teste'
+    });
+
+    this.responses.push({
+      question: 'What is the meaning of life?',
+      response: 'Teste testando teste'
+    });
+
+    this.responses.push({
+      question: 'What is the meaning of life?',
+      response: 'Teste testando teste'
+    });
+
+    this.responses.push({
+      question: 'What is the meaning of life? What is the meaning of life? What is the meaning of life? What is the meaning of life?',
+      response: 'Teste testando teste Teste testando teste Teste testando teste Teste testando teste Teste testando teste'
+    });
+
+    this.responses.push({
+      question: 'What is the meaning of life?',
+      response: 'Teste testando teste'
+    });
+
+    this.responses.push({
+      question: 'What is the meaning of life?',
+      response: 'Teste testando teste'
+    });
+
+    this.responses.push({
+      question: 'What is the meaning of life?',
+      response: 'Teste testando teste'
+    });
   }
 
   containsMarkdown(text: string) {
@@ -59,6 +135,7 @@ export class ChatGptComponent {
 
   find(event?: any) {
     if (this.text) {
+      this.scrollToTop();
       this.fecthing = true;
       this.chatGptService.getChatResponse(this.text).subscribe({
         next: (res) => {
@@ -68,10 +145,7 @@ export class ChatGptComponent {
             response: this.response,
           });
           this.text = '';
-          const inputText = document.getElementById('input-text');
-          if (inputText) {
-            inputText.focus();
-          }
+          // this.focusOnPrompt();
         },
         error: (err) => {
           console.error(err);
@@ -81,5 +155,16 @@ export class ChatGptComponent {
         },
       });
     }
+  }
+
+  private focusOnPrompt() {
+    const inputText = document.getElementById('input-text');
+    if (inputText) {
+      inputText.focus();
+    }
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll suave para o topo da página
   }
 }

@@ -156,6 +156,7 @@ input[type="text"]:focus {
     color: var(--bg-inverse);
     box-sizing: border-box;
     padding: 15px 15px 15px 40px;
+    font-size: medium;
     width: 100%;
 }
 
@@ -173,6 +174,20 @@ input[type="text"]:focus {
     transition: filter var(--duration-animation);
 }
 
+input[type="text"]:disabled {
+    opacity: 0.5;
+    background-color: var(--bg-strong-2);
+    border: none;
+    border-radius: 25px;
+    min-height: 50px;
+    height: auto;
+    color: var(--bg-inverse);
+    box-sizing: border-box;
+    padding: 15px 15px 15px 40px;
+    width: 100%;
+    cursor: default;
+}
+
 body.dark-theme .input-container::before {
     filter: invert(1);
 }
@@ -183,7 +198,8 @@ pre {
     padding: 10px;
     border: none;
     overflow-x: 100% !important;
-    overflow-y: hidden; /* Oculta a barra de rolagem vertical */
+    overflow-y: hidden;
+    /* Oculta a barra de rolagem vertical */
     max-width: fit-content;
 }
 

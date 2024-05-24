@@ -6,7 +6,7 @@
     width: 100%;
 }
 
-.question > h4 {
+.question>h4 {
     font-size: bold;
     word-wrap: break-word;
     margin-bottom: 8px;
@@ -18,5 +18,23 @@ h4 {
 }
 
 .item {
-   max-width: 100%;
+    max-width: 100%;
+}
+
+.content {
+    padding: 60px 20px 30px 20px;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 60px;
+    background-color: var(--bg);
+    width: calc(100vw - 40px);
+    margin-left: -20px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05 );
+    border-radius: 0 0 20px 20px;
 }

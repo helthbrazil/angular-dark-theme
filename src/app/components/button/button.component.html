@@ -1,1 +1,1 @@
-<button (click)="click()" class="neo-button">{{label ? label : ''}}</button>
+<button [disabled]="loading" (click)="click()" [class.btn-loading]="loading" class="neo-button">{{label ? label : ''}}</button>

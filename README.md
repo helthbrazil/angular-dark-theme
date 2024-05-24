@@ -18,13 +18,8 @@ npm start
 ng add angular-cli-ghpages
 ```
 ```sh
-// Build the application with a base href for GitHub Pages
-ng build --configuration=production
-
-```
-```sh
-// Deploy the application on GitHub Pages
-ng deploy --base-href /angular-dark-theme/
+// Build the application with a base href for GitHub Pages and deploy
+ng build --configuration=production && ng deploy --base-href /angular-dark-theme/
 ```
 
 * Ensure you have Angular CLI installed globally on your system before running these commands. You can install it using the following command:
