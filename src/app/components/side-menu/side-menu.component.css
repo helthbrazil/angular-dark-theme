@@ -15,6 +15,11 @@
     height: 100vh;
     box-sizing: border-box;
     transition: margin-left 500ms ease;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.itens {
+    margin-top: 20px;
 }
 
 .user-info {
@@ -58,12 +63,8 @@
 
 @media (max-width: 600px){
     .side-menu {
-        width: 100%;
-        margin-left: calc(100% * -1);
-    }
-
-    .item-menu {
-        justify-content: center;
+        width: 75%;
+        margin-left: -100%;
     }
 
     .item-menu p {
