@@ -7,14 +7,13 @@
     z-index: 100;
     top: 0px;
     left: 0;
-    margin-left: -300px;
+    transform: translateX(-100%);
     background-color: var(--bg-strong);
-    /* Ajuste para obter o efeito desejado */
     backdrop-filter: blur(5px);
     width: 300px;
     height: 100vh;
     box-sizing: border-box;
-    transition: margin-left 500ms ease;
+    transition: transform 500ms ease;
     box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -29,8 +28,10 @@
 }
 
 .side-menu.active {
-    margin-left: 0;
-    transition: margin-left 500ms ease;
+    transform: translateX(0);
+    /* Use transform para mover o menu lateral para dentro da tela */
+    transition: transform 500ms ease;
+    /* Ajuste a duração da transição */
 }
 
 .item-menu {
@@ -58,13 +59,22 @@
 .item-menu.active {
     background-image: linear-gradient(to right, var(--primary), var(--bg));
     font-weight: bold;
-    transition:  background-image var(--duration-animation) ;
+    transition: background-image var(--duration-animation);
 }
 
-@media (max-width: 600px){
+.close {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin-right: -15px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
     .side-menu {
-        width: 75%;
-        margin-left: -100%;
+        backdrop-filter: none;
+        background-color: var(--bg-strong-solid);
     }
 
     .item-menu p {

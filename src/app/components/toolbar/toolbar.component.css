@@ -16,8 +16,12 @@
     transition: box-shadow 0.3s ease; /* Adiciona uma transição suave */
 }
 
-.flex {
+.flex-menu {
+    width: 40px;
+    height: 40px;
     display: flex;
+    justify-content: center;
+    margin-left: -10px;
     align-items: center;
     gap: 30px;
 }
