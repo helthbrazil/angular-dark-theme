@@ -3,8 +3,10 @@
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
+    height: 45px;
     border: 0;
     cursor: pointer;
+    font-size: medium;
 }
 
 .neo-button:hover {

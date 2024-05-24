@@ -22,7 +22,27 @@ export class ChatGptComponent {
   response: string | Promise<string> | undefined;
   responses: IResponse[] = [];
 
-  constructor(private chatGptService: ChatGptService) {}
+  constructor(private chatGptService: ChatGptService) {
+    this.responses.push({
+      question: 'What is the meaning of life? What is the meaning of life? What is the meaning of life? What is the meaning of life?',
+      response: 'Teste testando teste Teste testando teste Teste testando teste Teste testando teste Teste testando teste'
+    });
+
+    this.responses.push({
+      question: 'What is the meaning of life?',
+      response: 'Teste testando teste'
+    });
+
+    this.responses.push({
+      question: 'What is the meaning of life?',
+      response: 'Teste testando teste'
+    });
+
+    this.responses.push({
+      question: 'What is the meaning of life?',
+      response: 'Teste testando teste'
+    });
+  }
 
   containsMarkdown(text: string) {
     const markdownPattern =

@@ -1,5 +1,5 @@
 export const environment = {
     production: false,
-    apiKey: '{{apiKey}}'
+    gptUrl: 'http://localhost:8080?text=:TEXT'
   };
   

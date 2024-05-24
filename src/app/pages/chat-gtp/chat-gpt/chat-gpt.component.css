@@ -1,7 +1,9 @@
 .form {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
 }
 
 .question > h4 {
@@ -11,9 +13,10 @@
     margin-top: 15px;
 }
 
-.response {
-    margin: 0;
-    padding: 5px 5px 5px 10px;
-    margin-bottom: 20px;
-    border-left: 3px var(--primary) solid;
+h4 {
+    margin: 0 !important;
+}
+
+.item {
+   max-width: 100%;
 }

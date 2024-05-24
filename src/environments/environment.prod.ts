@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiKey: '{{apiKey}}'
+  gptUrl: 'https://chat-gpt-nestjs-5944b275c522.herokuapp.com/?text=:TEXT'
 };

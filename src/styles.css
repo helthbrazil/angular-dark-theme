@@ -135,6 +135,7 @@ input[type="text"]:focus {
     outline: none;
     border: none;
     box-shadow: none;
+    font-size: medium;
 }
 
 .input-container {
@@ -145,8 +146,9 @@ input[type="text"]:focus {
 .input {
     background-color: var(--bg-strong-2);
     border: none;
-    border-radius: 20px;
-    height: 40px;
+    border-radius: 25px;
+    min-height: 50px;
+    height: auto;
     color: var(--bg-inverse);
     box-sizing: border-box;
     padding: 15px 15px 15px 40px;
@@ -173,10 +175,23 @@ body.dark-theme .input-container::before {
 
 pre {
     background-color: var(--bg-strong-2);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
     border: none;
+    overflow-x: 100% !important;
+    overflow-y: hidden; /* Oculta a barra de rolagem vertical */
+    max-width: fit-content;
 }
+
+.response {
+    margin: 0;
+    padding: 5px 5px 5px 10px;
+    margin-bottom: 20px;
+    border-left: 3px var(--primary) solid;
+    max-width: 100%;
+}
+
+
 
 /* Adiciona regra de media query para tornar o card responsivo */
 @media screen and (max-width: 440px) {
