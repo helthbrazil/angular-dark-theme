@@ -23,7 +23,7 @@ export class ChatGptComponent {
   responses: IResponse[] = [];
 
   constructor(private chatGptService: ChatGptService) {
-    this.responses.push({
+    /* this.responses.push({
       question: 'What is the meaning of life? What is the meaning of life? What is the meaning of life? What is the meaning of life?',
       response: 'Teste testando teste Teste testando teste Teste testando teste Teste testando teste Teste testando teste'
     });
@@ -41,7 +41,7 @@ export class ChatGptComponent {
     this.responses.push({
       question: 'What is the meaning of life?',
       response: 'Teste testando teste'
-    });
+    }); */
   }
 
   containsMarkdown(text: string) {

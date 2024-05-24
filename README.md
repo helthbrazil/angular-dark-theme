@@ -19,7 +19,7 @@ ng add angular-cli-ghpages
 ```
 ```sh
 // Build the application with a base href for GitHub Pages
-node replace-api-key.js YOUR_API_KEY && ng build --configuration=production
+ng build --configuration=production
 
 ```
 ```sh
